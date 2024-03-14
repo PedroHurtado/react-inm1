@@ -1,0 +1,14 @@
+.day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.day:hover{
+    outline: 1px solid blue;
+}
+.design{
+    padding: 100px;
+    border: 1px solid blue;
+}
