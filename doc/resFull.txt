@@ -1,0 +1,126 @@
+import { type } from "@testing-library/user-event/dist/type"
+
+pizza = {
+ id,
+ name,
+ description,
+ price,
+ url,
+ ingredients:[{id,name,price}]
+}
+
+
+server:http://localhost:8080
+path:"/pizzas"
+
+1. no se deben de expresar formatos
+    .json
+    .xml
+
+    content-type
+    accept
+
+2. no se deben de expresar acciones
+
+    /pizzas/add
+
+    POST
+    PUT
+    DELETE
+    GET
+
+1. Create
+url:/pizzas
+verbo:POST
+Request
+    Headers
+        content-type:"application/json"
+        https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+    Body
+        {
+            ...
+        }
+Response
+        Headers:
+            content-type:"application/json"
+        body
+            {...}
+status code 
+
+OK              ERROR
+201             400 OR 409
+                401
+                403
+                500
+2. modificar
+
+url:/pizzas/:id
+verbo:PUT
+Request
+    Headers
+        content-type:"application/json"
+        https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+    Body
+        {
+            ...
+        }
+Response
+        Headers:
+            content-type:"application/json"
+        body
+            {...}
+status code 
+
+OK              ERROR
+200             400 OR 409
+204             401
+                403
+                500
+                404
+
+3. eliminar
+
+url:/pizzas/:id
+verbo:DELETE
+Request
+    Headers
+        content-type:"application/json"
+        https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+    Body
+        {
+            ...
+        }
+
+status code 
+
+OK              ERROR
+204             400 OR 409
+                401
+                403
+                500
+                404
+
+3. eliminar
+
+url:/pizzas/:id
+verbo:GET
+Request
+    Headers
+        content-type:"application/json"
+        https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+   
+
+status code 
+
+OK              ERROR
+204             400 OR 409
+                401
+                403
+                500
+                404
+Response
+Headers:
+    content-type:"application/json"
+body
+    {...}
+        

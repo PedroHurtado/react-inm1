@@ -1,19 +1,24 @@
 {
-    "pizzas": [
-        {
-            "id": 1,
-            "name": "carbonara",
-            "price": 8.25
-        },
-        {
-            "id": 2,
-            "name": "mediterranea",
-            "price": 7.25
-        },
-        {
-            "id": 3,
-            "name": "quatro quesos",
-            "price": 9.00
-        }
-    ]
+  "pizzas": [
+    {
+      "id": "1",
+      "name": "carbonara",
+      "price": 8.25
+    },
+    {
+      "id": "2",
+      "name": "mediterranea",
+      "price": 7.25
+    },
+    {
+      "id": "3",
+      "name": "quatro quesos",
+      "price": 9
+    },
+    {
+      "id": "03d2",
+      "name": "margarita",
+      "price": 7
+    }
+  ]
 }

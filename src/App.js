@@ -5,11 +5,17 @@ import Counter from "./counter/Counter";
 import Timer from "./timer/Timer";
 import User from "./user/user";
 import Parent from "./children/Parent";*/
+import Carrito from "./fetch/Carrito";
 import Fetch from "./fetch/Fetch";
 
 function App() {
   return (
-    <Fetch/>
+    <>
+      <Carrito/>
+      <Fetch/>
+      
+    </>
+    
   )
   /*const name = "Pedro"
   
