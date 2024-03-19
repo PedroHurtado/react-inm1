@@ -1,13 +1,13 @@
 import { useFetch } from "./useFetch";
-
-function eventCarrito(pizza){
+import pubsub from "./pubsub";
+/*function eventCarrito(pizza){
     return new CustomEvent("carrito",{
-        detail:pizza,
+        detail:{...pizza},
         composed:true,
         bubbles:true
     })
     
-}
+}*/
 
 export default function Fetch() {
     const { loading, error, data } = useFetch("http://localhost:3000/pizzas", [])
@@ -23,10 +23,12 @@ export default function Fetch() {
 
         const node = ev.nativeEvent.composedPath()
             .find(n=>n.dataset && 'id' in n.dataset)
+
         if(node){
             const {id}= node.dataset;
             const pizza = data.find(p=>p.id===id)
-            pizza && node.dispatchEvent(eventCarrito(pizza))
+            pubsub.emit("carrito",{...pizza})
+            //pizza && node.dispatchEvent(eventCarrito(pizza))
         }
     }
     return <div onClick={handlerClick}>

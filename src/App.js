@@ -12,6 +12,9 @@ function App() {
   return (
     <>
       <Carrito/>
+      <Carrito/>
+      <Carrito/>
+      <Carrito/>
       <Fetch/>
       
     </>
