@@ -5,17 +5,17 @@ import Counter from "./counter/Counter";
 import Timer from "./timer/Timer";
 import User from "./user/user";
 import Parent from "./children/Parent";*/
+/*
 import Carrito from "./fetch/Carrito";
 import Fetch from "./fetch/Fetch";
+*/
+
+import Form from "./form/Form";
 
 function App() {
   return (
     <>
-      <Carrito/>
-      <Carrito/>
-      <Carrito/>
-      <Carrito/>
-      <Fetch/>
+      <Form/>
       
     </>
     
