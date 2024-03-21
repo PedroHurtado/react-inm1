@@ -9,16 +9,13 @@ import Parent from "./children/Parent";*/
 import Carrito from "./fetch/Carrito";
 import Fetch from "./fetch/Fetch";
 */
+import RoutesApp from './pages/routes'
 
-import Form from "./form/Form";
+//import Form from "./form/Form";
 
 function App() {
   return (
-    <>
-      <Form/>
-      
-    </>
-    
+    <RoutesApp/>
   )
   /*const name = "Pedro"
   

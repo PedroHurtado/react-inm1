@@ -1,0 +1,5 @@
+1. SPA
+2. MPA(MVC)
+3. PWA
+
+CSR,SSR,SSG
