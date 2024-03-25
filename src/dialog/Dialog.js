@@ -8,7 +8,8 @@ export default function Dialog({ children, open, confirm }) {
         dialogRef.current.close();
     }
     function handlerSubmit(ev){
-        ev.stopPropagation();        
+        ev.stopPropagation();  
+        ev.preventDefault();      
         dialogRef.current.close();
         confirm();
     }

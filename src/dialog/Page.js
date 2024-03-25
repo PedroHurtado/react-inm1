@@ -1,27 +1,21 @@
 import Dialog from "./Dialog"
+import { useDialog } from "./useDialog";
 
 export default function Page(){
 
-    function open(){
-        let dialog;
-        const fn=()=>{
-            return dialog
-        }
-        fn.set = (d)=>dialog =d
-        return fn;
-    }
-    const openCb = open();
+    
+    const open = useDialog();
 
     function openDialog(){
-        const dialog = openCb()
+        const dialog = open()
         dialog.current.show();
     }
     function confirmDialog(){
-
+        console.log("Confirmado")
     }
     return (
         <>
-            <Dialog confirm={confirmDialog} open={openCb}>
+            <Dialog confirm={confirmDialog} open={open}>
                 <p>Hola soy un parrafo</p>
             </Dialog>
             <button onClick={openDialog}>Abrir dialog</button>
