@@ -1,11 +1,10 @@
-export function useDialog(){
-    function open(){
-        let _dialog;
-        const fn=()=>{
-            return _dialog
-        }
-        fn.set = (dialog)=>_dialog =dialog
-        return fn;
+import { DIALOGMODE } from "./dialogmode";
+
+export function useDialog(mode= DIALOGMODE.show) {    
+    let openDialog;
+    const fn = (ev) => {
+        openDialog &&  openDialog(ev, mode)
     }
-    return open();
+    fn.set = (open) => openDialog = open
+    return fn;    
 }

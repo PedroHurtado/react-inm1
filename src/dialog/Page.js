@@ -5,11 +5,7 @@ export default function Page(){
 
     
     const open = useDialog();
-
-    function openDialog(){
-        const dialog = open()
-        dialog.current.show();
-    }
+    
     function confirmDialog(){
         console.log("Confirmado")
     }
@@ -18,7 +14,7 @@ export default function Page(){
             <Dialog confirm={confirmDialog} open={open}>
                 <p>Hola soy un parrafo</p>
             </Dialog>
-            <button onClick={openDialog}>Abrir dialog</button>
+            <button onClick={open}>Abrir dialog</button>
         </>
     )
 
